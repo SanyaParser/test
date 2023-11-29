@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Counter</title>
+</head>
+<body>
+    <h1>Loaded Files</h1>
+    <ul>
+        {% for file in loaded_files %}
+            <li>{{ file.file.name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'wordcounter:load_file' %}">Load File</a>
+    <a href="{% url 'wordcounter:word_count' %}">Word Count</a>
+    <a href="{% url 'wordcounter:clear_memory' %}">Clear Memory</a>
+</body>
+</html>
